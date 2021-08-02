@@ -1,0 +1,1 @@
+# terraform-newrelic-log-alert-module
