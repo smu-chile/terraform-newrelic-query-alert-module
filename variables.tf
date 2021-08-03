@@ -58,12 +58,17 @@ variable "criticalThresholdOccurrences" {
   description = "Threshold occurrences for crtical alert"
 }
 
-variable "email_channelName" {
+variable "alert_channelName" {
   type        = string
-  description = "Name for email channel"
+  description = "Type of alert channel"
 }
 
-variable "email_recipients" {
+variable "alert_channelType" {
   type        = string
-  description = "Recipients for alert email"
+  description = "Name for alert channel"
+}
+
+variable "alert_recipients" {
+  type        = string
+  description = "Recipients for alert"
 }

@@ -39,11 +39,11 @@ resource "newrelic_nrql_alert_condition" "nrql_alert_condition" {
 
 //Canal de alerta - email// 
 resource "newrelic_alert_channel" "alert_chanel" {
-  name = var.email_channelName
-  type = "email"
+  name = var.alert_channelName
+  type = var.alert_channelType
 
   config {
-    recipients              = var.email_recipients
+    recipients              = var.alert_recipients
     include_json_attachment = "1"
   }
 }
