@@ -40,13 +40,10 @@ resource "newrelic_nrql_alert_condition" "nrql_alert_condition" {
 //Canal de alerta - email// 
 resource "newrelic_alert_channel" "alert_chanel" {
   name = var.alert_channelName
-  type = var.alert_channelType
+  type = "slack"
 
 
   config {
-    recipients              = var.alert_recipients
-    include_json_attachment = "1"
-
     url     = var.alert_slackUrl
     channel = var.alert_slackChannel
   }
