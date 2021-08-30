@@ -72,3 +72,13 @@ variable "alert_recipients" {
   type        = string
   description = "Recipients for alert"
 }
+
+variable "alert_slackUrl" {
+  type        = string
+  description = "URL for webhook"
+}
+
+variable "alert_slackChannel" {
+  type        = string
+  description = "Slack Channel"
+}
