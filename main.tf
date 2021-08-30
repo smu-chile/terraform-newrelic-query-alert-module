@@ -42,9 +42,13 @@ resource "newrelic_alert_channel" "alert_chanel" {
   name = var.alert_channelName
   type = var.alert_channelType
 
+
   config {
     recipients              = var.alert_recipients
     include_json_attachment = "1"
+
+    url     = var.alert_slackUrl
+    channel = var.alert_slackChannel
   }
 }
 
